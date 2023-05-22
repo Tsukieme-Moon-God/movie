@@ -1,0 +1,21 @@
+.cont-div {
+    border: 2px solid green;
+}
+
+.cont-image {
+  width: 500px;
+}
+
+.cont-ul ul {
+  list-style: none;
+  height: 280px;
+  width: 600px;
+
+  padding: 20px;
+}
+
+.cont-ul li {
+  padding: 8px;
+  font-size: 12px;
+}
+
