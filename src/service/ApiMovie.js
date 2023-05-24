@@ -1,16 +1,27 @@
 export default class MovieService {
-    _apiBase = `https://api.themoviedb.org/3/movie/${550}?api_key=98312ffcf969092a3b66b9fb44af06cc`;
-  
-    async getResourse() {
-      const one = await fetch(`${this._apiBase}`);
-      const two = await one.json();
-      return two;
-    }
+  _apiBase = `https://api.themoviedb.org/3/movie/343611?api_key=98312ffcf969092a3b66b9fb44af06cc`;
+  _apiBase_02 = `https://api.themoviedb.org/3/search/movie?api_key=98312ffcf969092a3b66b9fb44af06cc&query=`;
+
+  async getResourse(movie) {
+    //const one = await fetch(`${this._apiBase}`);
+    const one = await fetch(
+      `https://api.themoviedb.org/3/movie/${movie}?api_key=98312ffcf969092a3b66b9fb44af06cc`
+    );
+    const two = await one.json();
+    return two;
   }
 
-//   const movie = new MovieService();
-// movie.getResourse().then((body) => {
-//   const { title, id, genres, overview, release_date } = body;
-//   console.log(`${title}\n${id}\n${genres}\n${overview}\n${release_date}`);
-//   console.log(genres);
+  async searchMovie(search) {
+    const one = await fetch(
+      `https://api.themoviedb.org/3/search/movie?api_key=98312ffcf969092a3b66b9fb44af06cc&query=${search}`
+    );
+    //const one = await fetch(`${this._apiBase_02}`);
+    const two = await one.json();
+    return two;
+  }
+}
+
+// const value = new MovieService();
+// value.searchMovie().then((el) => {
+//   console.log(el);
 // });

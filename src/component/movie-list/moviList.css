@@ -1,5 +1,6 @@
 .cont-div {
     border: 2px solid green;
+    max-width: 540px;
 }
 
 .cont-image {
@@ -17,5 +18,10 @@
 .cont-ul li {
   padding: 8px;
   font-size: 12px;
+}
+
+.megaDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
