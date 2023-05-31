@@ -3,7 +3,6 @@ export default class MovieService {
   _apiBase_02 = `https://api.themoviedb.org/3/search/movie?api_key=98312ffcf969092a3b66b9fb44af06cc&query=`;
 
   async getResourse(movie) {
-    //const one = await fetch(`${this._apiBase}`);
     const one = await fetch(
       `https://api.themoviedb.org/3/movie/${movie}?api_key=98312ffcf969092a3b66b9fb44af06cc`
     );
@@ -15,7 +14,7 @@ export default class MovieService {
     const one = await fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=98312ffcf969092a3b66b9fb44af06cc&query=${search}`
     );
-    //const one = await fetch(`${this._apiBase_02}`);
+
     const two = await one.json();
     return two;
   }
